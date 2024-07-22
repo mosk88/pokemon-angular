@@ -1,20 +1,30 @@
 <header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-        <div class="logo">
-            <img
-                src="https://angular.io/assets/images/logos/angular/angular.svg"
-                alt="Angular"
-            />
-        </div>
-
-        <nav>
-            <a
-                href="https://angular.io"
-                target="_blank"
-                rel="noopener"
-            >
-                Angular Docs
-            </a>
-        </nav>
+      <a class="navbar-brand" href="#">
+        <img
+          src="https://angular.io/assets/images/logos/angular/angular.svg"
+          alt="Angular"
+          width="30"
+          height="30"
+          class="d-inline-block align-top"
+        />
+        Angular App
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="list-pokemon">Pokemon List</a>
+          </li>
+         
+        </ul>
+      </div>
     </div>
+  </nav>
 </header>

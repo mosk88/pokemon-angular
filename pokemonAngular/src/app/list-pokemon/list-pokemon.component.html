@@ -1,0 +1,10 @@
+<div class="card-pokemon" *ngFor="let pokemon of listPokemon" >
+  <h1>{{ pokemon.pokedex_id }}</h1>
+  <p>French Name: {{ pokemon.name.fr }}</p>
+  <img [src]="pokemon.sprites.regular" alt="{{ pokemon.name.fr }}" />
+  <img [src]="pokemon.sprites.shiny" alt="{{ pokemon.name.fr }}" />
+  <img [src]="pokemon.sprites.regular" alt="">
+  <p>hp {{ pokemon.stats.hp }} attack: {{ pokemon.stats.atk }} defense: {{ pokemon.stats.def}} speed atk: {{ pokemon.stats.spe_atk }}
+     speed def: {{ pokemon.stats.spe_def }} vitesse: {{ pokemon.stats.vite }}</p>
+ 
+</div>
