@@ -1,18 +1,53 @@
 <div class="container">
-  <div class="row">
-    <label for="searchInput">Rechercher</label>
-<input class="form-control" type="text" id="searchInput" [(ngModel)]="searchTerm" placeholder="Search...">
-    <div class="col-md-4" *ngFor="let pokemon of pokemons | searche:searchTerm">
+  <label for="searchInput">Rechercher</label>
+  <input
+    class="form-control"
+    type="text"
+    id="searchInput"
+    [(ngModel)]="searchTerm"
+    placeholder="Search..."
+    (input)="onSearch()"
+  />
+
+  <div *ngIf="pokemonFinded" class="selected-pokemon mt-3 mb-3 d-flex justify-content-between">
+     <div class="pokemon-image mt-5 mr-5">
+      <img
+        [src]="pokemonFinded.sprites.regular"
+        alt="{{ pokemonFinded.name.fr }}"
+        class="img-fluid"
+      />
+    </div>
+    <div class="pokemon-info">
+      <h4>{{ pokemonFinded.name.fr }}</h4>
+      <p>Height: {{ pokemonFinded.height }}</p>
+      <p>Weight: {{ pokemonFinded.weight }}</p>
+     
+    </div>
+   
+  </div>
+
+  <div class="row mt-3" *ngIf="!pokemonFinded">
+    <div
+      class="col-md-4"
+      *ngFor="let pokemon of pokemons | searche:searchTerm"
+      (click)="pokemonFinded(pokemon)"
+    >
       <div class="card mb-4">
         <div class="card-body">
-          <h1 class="card-title">{{ pokemon.pokedex_id }}</h1>
-          <h2 class="card-text"> {{ pokemon.name.fr }}</h2>
+          <h1 class="card-title">#{{ pokemon.pokedex_id }}</h1>
+          <h2 class="card-text">{{ pokemon.name.fr }}</h2>
           <div class="d-flex justify-content-center">
-            <img [src]="pokemon.sprites.regular" alt="{{ pokemon.name.fr }}" class="img-fluid m-1" />
+            <img
+              [src]="pokemon.sprites.regular"
+              alt="{{ pokemon.name.fr }}"
+              class="img-fluid m-1"
+            />
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+
 
