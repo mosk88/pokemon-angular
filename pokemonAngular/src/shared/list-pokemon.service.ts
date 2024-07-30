@@ -1,8 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { IListPokemons } from './entities';
-import { PokeballComponent } from '../app/pokeball/pokeball.component';
-import { Observable } from 'rxjs';
+
 import { environment } from '../environments/environment.development';
 
 

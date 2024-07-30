@@ -10,6 +10,7 @@
 /node_modules
 npm-debug.log
 yarn-error.log
+/src/environment
 
 # IDEs and editors
 .idea/
@@ -41,4 +42,4 @@ testem.log
 .DS_Store
 Thumbs.db
 # Environment 
-/.src/environments
+
