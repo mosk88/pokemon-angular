@@ -1,5 +1,6 @@
 export interface IListPokemons   {
-     pokedex_id: number;
+
+  pokedex_id: number;
   generation: number;
   category: string;
   name: {
@@ -26,3 +27,7 @@ export interface IListPokemons   {
   formes: any | null;
     
 }
+
+
+
+

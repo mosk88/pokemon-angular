@@ -1,10 +1,31 @@
-<div class="card-pokemon" *ngFor="let pokemon of listPokemon" >
+<!-- <div class="card-pokemon" *ngFor="let pokemon of listPokemon" >
   <h1>{{ pokemon.pokedex_id }}</h1>
   <p>French Name: {{ pokemon.name.fr }}</p>
   <img [src]="pokemon.sprites.regular" alt="{{ pokemon.name.fr }}" />
   <img [src]="pokemon.sprites.shiny" alt="{{ pokemon.name.fr }}" />
-  <img [src]="pokemon.sprites.regular" alt="">
+  
   <p>hp {{ pokemon.stats.hp }} attack: {{ pokemon.stats.atk }} defense: {{ pokemon.stats.def}} speed atk: {{ pokemon.stats.spe_atk }}
      speed def: {{ pokemon.stats.spe_def }} vitesse: {{ pokemon.stats.vite }}</p>
  
+</div> -->
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let pokemon of listPokemon">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h1 class="card-title">{{ pokemon.pokedex_id }}</h1>
+          <h2 class="card-text"> {{ pokemon.name.fr }}</h2>
+          <div class="d-flex justify-content-center">
+            <img [src]="pokemon.sprites.regular" alt="{{ pokemon.name.fr }}" class="img-fluid m-1" />
+          </div>
+            <a routerLink="/pokemon/{{ pokemon.pokedex_id }}" class="btn btn-primary">Details</a>
+            <button  (click)="getDelete(pokemon.pokedex_id)"class="btn btn-danger m-2">Supprimer</button>
+            <button (click)="addPokemons(pokemon)"class="btn btn-warning m-2">ajouter</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+

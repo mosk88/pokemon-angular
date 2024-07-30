@@ -38,4 +38,5 @@ export class CardComponent implements OnInit {
       return acc;
     }, {} as { [key: string]: IListPokemons[] });
   }
+  
 }

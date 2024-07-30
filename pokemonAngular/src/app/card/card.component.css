@@ -1,0 +1,20 @@
+/* Ensure cards have some spacing and are responsive */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.card-img-top {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+/* Add spacing between card groups */
+.row {
+  margin-bottom: 2rem;
+}

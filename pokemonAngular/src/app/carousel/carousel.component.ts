@@ -20,7 +20,7 @@ export class CarouselComponent implements OnInit {
 
   getList() {
     this.service.fetchAll().subscribe((data) => {
-      this.listPokemon = data.slice(1, 6);
+      this.listPokemon = data.slice(1, 20);
     });
   }
 }

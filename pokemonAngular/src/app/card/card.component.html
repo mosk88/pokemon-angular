@@ -1,6 +1,6 @@
 <div class="container mt-4">
   <div *ngFor="let type of (pokemonByType | keyvalue)">
-    <h2 class="my-4">{{ type.key | titlecase }} Type</h2>
+    <h2 class="my-4"> Type</h2>
     <div class="row">
       <div class="col-md-4 mb-4" *ngFor="let pokemon of type.value">
         <div class="card">

@@ -1,19 +1,28 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { IListPokemons } from './entities';
+import { PokeballComponent } from '../app/pokeball/pokeball.component';
+import { Observable } from 'rxjs';
+import { environment } from '../environments/environment.development';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class ListPokemonService {
-  ApiUrl ='https://tyradex.tech/api/v1/pokemon'
+  url = environment.apiURL
 
   constructor(private http: HttpClient) { }
 
   fetchAll() {
-    let params = {
+    let params = { 
       limit: 20
     }
-    return this.http.get<IListPokemons[]>(this.ApiUrl,{params});
+    return this.http.get<IListPokemons[]>(this.url,{params});
   }
+
+  fetchOne(id: any) {
+    return this.http.get<IListPokemons>(`${this.url}/${id}`);
+  }
+
 }

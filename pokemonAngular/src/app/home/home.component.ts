@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 
 import { CarouselComponent } from '../carousel/carousel.component';
 import { CardComponent } from '../card/card.component';
@@ -12,4 +12,9 @@ import { CardComponent } from '../card/card.component';
 })
 export class HomeComponent {
 
-}
+ 
+
+  }
+
+
+

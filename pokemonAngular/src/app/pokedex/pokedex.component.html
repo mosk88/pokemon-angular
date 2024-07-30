@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <label for="searchInput">Rechercher</label>
+<input class="form-control" type="text" id="searchInput" [(ngModel)]="searchTerm" placeholder="Search...">
+    <div class="col-md-4" *ngFor="let pokemon of pokemons | searche:searchTerm">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h1 class="card-title">{{ pokemon.pokedex_id }}</h1>
+          <h2 class="card-text"> {{ pokemon.name.fr }}</h2>
+          <div class="d-flex justify-content-center">
+            <img [src]="pokemon.sprites.regular" alt="{{ pokemon.name.fr }}" class="img-fluid m-1" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,46 @@
+<link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+/>
+
+<div class="container">
+  <div class="row">
+    <!-- Bag Image Section -->
+    <div class="col-md-3">
+      <h2>Pokeball</h2>
+      <div>
+        <img
+          src="https://www.cdiscount.com/pdt2/2/4/6/2/700x700/ban3701405800246/rw/sac-a-dos-du-dresseur-pokemon-bandai-sasha-b.jpg"
+          alt="Pokeball Bag"
+          class="img-fluid"
+        />
+      </div>
+    </div>
+
+    <!-- Pokémon and Pokéball Section -->
+    <div class="col-md-9">
+      <div class="d-flex flex-column justify-content-between">
+        <div *ngFor="let pokeball of pokeballs" class="media mb-3 d-flex">
+          <img
+            src="https://www.mangatori.fr/2474199-large_default/wand-company-wrc13419-pokemon-replique-diecast-poke-ball.jpg"
+            class="img-fluid"
+            alt="Pokéball"
+          />
+          <img
+            [src]="pokeball.sprites.regular"
+            class="mr-3 ml-3"
+            alt="{{ pokeball.name.fr }}"
+          
+            
+          />
+          <div class="media-body bg-dark h-25 w-25 text-white
+          mt-0">
+            <h5 class="mt-0">{{ pokeball.name.fr }}</h5>
+            <p>HP: {{ pokeball.stats.hp }}</p>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

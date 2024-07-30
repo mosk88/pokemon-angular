@@ -1,0 +1,64 @@
+<!-- <div class="container ">
+  <div class="row">
+  <div class="col-md-4 ">
+      <div class="card mb-4">
+        <div class="card-body ">
+          <h1 class="card-title">{{ pokemon?.pokedex_id }}</h1>
+          <h2 class="card-text"> {{ pokemon?.name?.fr }}</h2>
+          <div class="d-flex justify-content-center">
+            <img [src]="pokemon?.sprites?.regular" alt="{{ pokemon?.name?.fr }}" class="img-fluid m-1 w-auto " />
+            <img [src]="pokemon?.sprites?.shiny" alt="{{ pokemon?.name?.fr }}" class="img-fluid m-1" />
+          </div>
+         
+          <p class="card-text">
+            <strong>Pokédex ID:</strong> {{ pokemon?.pokedex_id }}<br>
+            <strong>Generation:</strong> {{ pokemon?.generation }}<br>
+            <strong>Category:</strong> {{ pokemon?.category }}<br>
+            <strong>Height:</strong> {{ pokemon?.height }}<br>
+            <strong>Weight:</strong> {{ pokemon?.weight }}<br>
+            <strong>Egg Groups:</strong> {{ pokemon?.egg_groups }}<br>
+            <strong>Catch Rate:</strong> {{ pokemon?.catch_rate }}<br>
+            <strong>Level 100:</strong> {{ pokemon?.level_100 }}<br> 
+           </p>
+          
+            <button (click)="goBack()" class="btn btn-primary">router</button>
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- pokemon.component.html -->
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h1 class="card-title">{{ pokemon?.pokedex_id }}</h1>
+          <h2 class="card-text">{{ pokemon?.name?.fr }}</h2>
+          <div class="d-flex justify-content-center">
+            <img [src]="pokemon?.sprites?.regular" alt="{{ pokemon?.name?.fr }}" class="img-fluid m-1 w-auto" />
+            <img [src]="pokemon?.sprites?.shiny" alt="{{ pokemon?.name?.fr }}" class="img-fluid m-1 w-auto" />
+          </div>
+          <p class="card-text mt-3">
+            <strong>Pokédex ID:</strong> {{ pokemon?.pokedex_id }}<br>
+            <strong>Generation:</strong> {{ pokemon?.generation }}<br>
+            <strong>Category:</strong> {{ pokemon?.category }}<br>
+            <strong>Height:</strong> {{ pokemon?.height }}<br>
+            <strong>Weight:</strong> {{ pokemon?.weight }}<br>
+            <strong>Egg Groups:</strong> {{ pokemon?.egg_groups }}<br>
+            <strong>Catch Rate:</strong> {{ pokemon?.catch_rate }}<br>
+            <strong>Level 100:</strong> {{ pokemon?.level_100 }}<br>
+          </p>
+          <button (click)="goBack()" class="btn btn-primary w-100">Back</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
