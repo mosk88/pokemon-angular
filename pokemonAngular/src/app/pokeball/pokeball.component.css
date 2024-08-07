@@ -1,4 +1,25 @@
-img{
-    width: 200px;
-    height: 200px;
+img {
+  width: 200px;
+  height: 200px;
+}
+.bubble-style {
+  position: relative;
+  background-color: #343a40; /* Dark background color */
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  width: 200px; /* Adjust width as needed */
+  text-align: center;
+}
+
+.bubble-style::after {
+  content: "";
+  position: absolute;
+  bottom: -10px; /* Adjust based on your needs */
+  left: 20px; /* Adjust to center or place it as desired */
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #343a40; /* Match the background color */
 }
